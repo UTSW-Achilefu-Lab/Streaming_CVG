@@ -1,3 +1,5 @@
+#!/bin/bash
+
 pkill raspivid
 pkill gst-launch-1.0
 
@@ -10,9 +12,5 @@ gst-launch-1.0 -vvvv v4l2src device=/dev/video1 ! \
 video/x-raw,width=640,height=480,framerate=30/1 ! \
 x264enc tune=zerolatency bitrate=512 speed-preset=ultrafast !\
 h264parse ! rtph264pay config-interval=-1 ! rtpstreampay ! \
-tcpserversink host=172.17.140.252 port=5001 &
+tcpserversink host=172.17.140.252 port=5001 
 
-# Recieve pipeline
-gst-launch-1.0 -vvvv tcpclientsrc host=172.17.140.56 port=5003 !\
-application/x-rtp-stream,encoding-name=H264 ! rtpstreamdepay ! \
-rtph264depay ! h264parse ! avdec_h264 ! autovideosink sync=false
