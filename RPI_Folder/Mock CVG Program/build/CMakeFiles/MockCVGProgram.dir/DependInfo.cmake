@@ -1,21 +1,15 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/Onboard_VS_Streaming_RPI/Mock CVG Program/main.cpp" "/home/pi/Onboard_VS_Streaming_RPI/Mock CVG Program/build/CMakeFiles/MockCVGProgram.dir/main.cpp.o"
-  "/home/pi/Onboard_VS_Streaming_RPI/Mock CVG Program/yen_threshold.cpp" "/home/pi/Onboard_VS_Streaming_RPI/Mock CVG Program/build/CMakeFiles/MockCVGProgram.dir/yen_threshold.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/pi/Desktop/Onboard_VS_Streaming_RPI/Mock"
-  "../CVG"
-  "../Program"
-  "../Program/include"
-  "/usr/include/opencv"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/pi/Streaming_CVG/RPI_Folder/Mock CVG Program/singleCam.cpp" "CMakeFiles/MockCVGProgram.dir/singleCam.cpp.o" "gcc" "CMakeFiles/MockCVGProgram.dir/singleCam.cpp.o.d"
+  "/home/pi/Streaming_CVG/RPI_Folder/Mock CVG Program/yen_threshold.cpp" "CMakeFiles/MockCVGProgram.dir/yen_threshold.cpp.o" "gcc" "CMakeFiles/MockCVGProgram.dir/yen_threshold.cpp.o.d"
   )
 
 # Targets to which this target links.

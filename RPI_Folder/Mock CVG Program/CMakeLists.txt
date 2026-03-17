@@ -15,14 +15,15 @@ if(NOT WIRINGPI_LIB)
     message(FATAL_ERROR "WiringPi library not found.")
 endif()
 
-# Set the source file
-set(SOURCE_FILES main.cpp)
+# Set the source files
+# set(SOURCE_FILES main.cpp singleCam.cpp)
+set(SOURCE_FILES  singleCam.cpp)
 
 # Create the executable
 add_executable(MockCVGProgram ${SOURCE_FILES} yen_threshold.cpp)
 
-target_include_directories(MockCVGProgram PRIVATE 
-    ${OpenCV_INCLUDE_DIRS} 
+target_include_directories(MockCVGProgram PRIVATE
+    ${OpenCV_INCLUDE_DIRS}
     /home/pi/Desktop/Onboard_VS_Streaming_RPI/Mock CVG Program/
     /home/pi/Desktop/Onboard_VS_Streaming_RPI/Mock CVG Program/include
     )
